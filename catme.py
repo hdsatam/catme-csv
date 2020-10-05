@@ -11,8 +11,6 @@ def process_csv(filename):
         for row in reader:
             if row[4] == '':
                 continue
-            #if row[4] == 'Total Attempts':
-                #continue
             if ',' in row[4]:
                 continue
             if '.' in row[4]:
