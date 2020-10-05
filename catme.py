@@ -1,21 +1,21 @@
 #!/usr/bin/python3
 
-import numpy as np
-import csv
+import numpy as g
+import csv as e
 
-def process_csv(filename):
-    with open(filename) as f:
-        reader = csv.reader(f, delimiter=',')
+def h(a):
+    with open(a) as f:
+        b = e.reader(f, delimiter=',')
         # gets names of features
-        row1 = next(reader)
-        for row in reader:
-            if row[4] == '':
+        c = next(b)
+        for d in b:
+            if d[4] == '':
                 continue
-            if ',' in row[4]:
+            if ',' in d[4]:
                 continue
-            if '.' in row[4]:
+            if '.' in d[4]:
                 continue
-            if int(row[4]) >= 16 and int(row[4]) <= 24:
-                print(row[2])
+            if int(d[4]) >= 16 and int(d[4]) <= 24:
+                print(d[2])
     
-process_csv("catme.csv")
+h("catme.csv")
